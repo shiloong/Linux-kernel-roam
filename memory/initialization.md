@@ -1,4 +1,5 @@
-// Call tree
+## memory init 
+```c
 start_kernel
 -> setup_arch
    -> setup_machine_fdt
@@ -35,4 +36,4 @@ start_kernel
                   -> __free_pages_bootmem
                      -> __free_pages_boot_core
                         -> __free_pages // fillup buddy system
-
+```

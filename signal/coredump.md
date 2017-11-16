@@ -1,4 +1,5 @@
 # syscall kill
+```c
 kill
 `-> kill_something_info
     `-> kill_pid_info
@@ -12,13 +13,14 @@ kill
 			        `-> signal_wake_up_state
 				    |-> set_tsk_thread_flag
 				    `-> kick_process
+```
 
 # coredump
+```c
 ret_to_user_from_irq
 `-> slow_work_pending
     `-> do_work_pending
         `-> do_signal
             `-> get_signal
                 `-> do_coredump
-
-
+```
