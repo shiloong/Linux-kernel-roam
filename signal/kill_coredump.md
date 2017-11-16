@@ -3,9 +3,9 @@
 kill
 `-> kill_something_info
     `-> kill_pid_info
-        `-> group_send_sig_info
-	    |-> check_kill_permission
-	    `-> do_send_sig_info
+        `-> group_send_sig_info                                       <- tkill
+	    |-> check_kill_permission <- do_send_specific <- do_tkill <- tgkill
+	    `-> do_send_sig_info      <-'
 	        `-> send_signal
 		    `-> __send_signal
 		        `-> complete_signal
