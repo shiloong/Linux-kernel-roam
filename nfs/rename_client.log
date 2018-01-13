@@ -1,0 +1,611 @@
+## 
+[149408.129091] RPC:       looking up Generic cred
+[149408.129110] RPC:       new task initialized, procpid 12847
+[149408.129116] RPC:       allocated task 80000003d2189a80
+[149408.129123] RPC: 25444 __rpc_execute flags=0x80
+[149408.129130] RPC: 25444 call_start nfs4 proc ACCESS (sync)
+[149408.129135] RPC: 25444 call_reserve (status 0)
+[149408.129144] RPC: 25444 reserved req 80000003ceeadc00 xid e8bd7aaf
+[149408.129150] RPC:       wake_up_first(80000003da2ae178 "xprt_sending")
+[149408.129157] RPC: 25444 call_reserveresult (status 0)
+[149408.129162] RPC: 25444 call_refresh (status 0)
+[149408.129169] RPC: 25444 refreshing UNIX cred 80000003d8973580
+[149408.129175] RPC: 25444 call_refreshresult (status 0)
+[149408.129180] RPC: 25444 call_allocate (status 0)
+[149408.129189] RPC: 25444 allocated buffer of size 1144 at 80000003cef45800
+[149408.129195] RPC: 25444 call_bind (status 0)
+[149408.129201] RPC: 25444 call_connect xprt 80000003da2ae000 is connected
+[149408.129206] RPC: 25444 call_transmit (status 0)
+[149408.129211] RPC: 25444 xprt_prepare_transmit
+[149408.129217] RPC: 25444 rpc_xdr_encode (status 0)
+[149408.129222] RPC: 25444 marshaling UNIX cred 80000003d8973580
+[149408.129229] RPC: 25444 using AUTH_UNIX cred 80000003d8973580 to wrap rpc data
+[149408.129238] RPC: 25444 xprt_transmit(124)
+[149408.129275] RPC:       xs_tcp_send_request(124) = 124
+[149408.129280] RPC: 25444 xmit complete
+[149408.129287] RPC: 25444 sleep_on(queue "xprt_pending" time 4332243786)
+[149408.129294] RPC: 25444 added to queue 80000003da2ae228 "xprt_pending"
+[149408.129299] RPC: 25444 setting alarm for 60000 ms
+[149408.129306] RPC:       wake_up_first(80000003da2ae178 "xprt_sending")
+[149408.129311] RPC: 25444 sync task going to sleep
+[149408.129572] RPC:       xs_tcp_data_ready...
+[149408.129580] RPC:       xs_tcp_data_recv started
+[149408.129586] RPC:       reading TCP record fragment of length 124
+[149408.129590] RPC:       reading XID (4 bytes)
+[149408.129596] RPC:       reading reply for XID e8bd7aaf
+[149408.129600] RPC:       reading CALL/REPLY flag (4 bytes)
+[149408.129605] RPC:       read reply XID e8bd7aaf
+[149408.129612] RPC:       XID e8bd7aaf read 116 bytes
+[149408.129619] RPC:       xprt = 80000003da2ae000, tcp_copied = 124, tcp_offset = 124, tcp_reclen = 124
+[149408.129625] RPC: 25444 xid e8bd7aaf complete (124 bytes received)
+[149408.129632] RPC: 25444 __rpc_wake_up_task (now 4332243786)
+[149408.129636] RPC: 25444 disabling timer
+[149408.129642] RPC: 25444 removed from queue 80000003da2ae228 "xprt_pending"
+[149408.129651] RPC:       __rpc_wake_up_task done
+[149408.129655] RPC:       xs_tcp_data_recv done
+[149408.129687] RPC: 25444 sync task resuming
+[149408.129694] RPC: 25444 call_status (status 124)
+[149408.129700] RPC: 25444 call_decode (status 124)
+[149408.129707] RPC: 25444 validating UNIX cred 80000003d8973580
+[149408.129713] RPC: 25444 using AUTH_UNIX cred 80000003d8973580 to unwrap rpc data
+[149408.129723] decode_attr_type: type=00
+[149408.129729] decode_attr_change: change attribute=5828905206384951296
+[149408.129734] decode_attr_size: file size=4096
+[149408.129739] decode_attr_fsid: fsid=(0x0/0x0)
+[149408.129745] decode_attr_fileid: fileid=0
+[149408.129750] decode_attr_fs_locations: fs_locations done, error = 0
+[149408.129755] decode_attr_mode: file mode=00
+[149408.129760] decode_attr_nlink: nlink=1
+[149408.129765] decode_attr_owner: uid=-2
+[149408.129770] decode_attr_group: gid=-2
+[149408.129775] decode_attr_rdev: rdev=(0x0:0x0)
+[149408.129780] decode_attr_space_used: space used=0
+[149408.129785] decode_attr_time_access: atime=0
+[149408.129791] decode_attr_time_metadata: ctime=1357147751
+[149408.129796] decode_attr_time_modify: mtime=1357147751
+[149408.129801] decode_attr_mounted_on_fileid: fileid=0
+[149408.129806] decode_getfattr_attrs: xdr returned 0
+[149408.129811] decode_getfattr_generic: xdr returned 0
+[149408.129816] RPC: 25444 call_decode result 0
+[149408.129822] RPC: 25444 return 0, status 0
+[149408.129826] RPC: 25444 release task
+[149408.129834] RPC:       freeing buffer of size 1144 at 80000003cef45800
+[149408.129841] RPC: 25444 release request 80000003ceeadc00
+[149408.129846] RPC:       wake_up_first(80000003da2ae2d8 "xprt_backlog")
+[149408.129852] RPC:       rpc_release_client(80000003da1ad600)
+[149408.129858] RPC: 25444 freeing task
+[149408.129868] NFS: nfs_update_inode(0:36/2 fh_crc=0x8bb7a967 ct=2 info=0x26040)
+
+##
+[149408.129879] NFS: permission(0:36/2), mask=0x1, res=0
+[149408.129888] NFS: lookup(//foo)
+[149408.129896] NFS call  lookup foo
+[149408.129901] RPC:       new task initialized, procpid 12847
+[149408.129906] RPC:       allocated task 80000003d2189a80
+[149408.129912] RPC: 25445 __rpc_execute flags=0x80
+[149408.129918] RPC: 25445 call_start nfs4 proc LOOKUP (sync)
+[149408.129923] RPC: 25445 call_reserve (status 0)
+[149408.129930] RPC: 25445 reserved req 80000003ceeadc00 xid e8bd7ab0
+[149408.129936] RPC:       wake_up_first(80000003da2ae178 "xprt_sending")
+[149408.129942] RPC: 25445 call_reserveresult (status 0)
+[149408.129947] RPC: 25445 call_refresh (status 0)
+[149408.129952] RPC: 25445 looking up UNIX cred
+[149408.129957] RPC:       looking up UNIX cred
+[149408.130010] RPC: 25445 refreshing UNIX cred 80000003d8973580
+[149408.130017] RPC: 25445 call_refreshresult (status 0)
+[149408.130028] RPC: 25445 call_allocate (status 0)
+[149408.130034] RPC: 25445 allocated buffer of size 1536 at 80000003cef45800
+[149408.130054] RPC: 25445 call_bind (status 0)
+[149408.130072] RPC: 25445 call_connect xprt 80000003da2ae000 is connected
+[149408.130090] RPC: 25445 call_transmit (status 0)
+[149408.130107] RPC: 25445 xprt_prepare_transmit
+[149408.130125] RPC: 25445 rpc_xdr_encode (status 0)
+[149408.130143] RPC: 25445 marshaling UNIX cred 80000003d8973580
+[149408.130165] RPC: 25445 using AUTH_UNIX cred 80000003d8973580 to wrap rpc data
+[149408.130183] RPC: 25445 xprt_transmit(132)
+[149408.130228] RPC:       xs_tcp_send_request(132) = 132
+[149408.130249] RPC: 25445 xmit complete
+[149408.130267] RPC: 25445 sleep_on(queue "xprt_pending" time 4332243787)
+[149408.130289] RPC: 25445 added to queue 80000003da2ae228 "xprt_pending"
+[149408.130310] RPC: 25445 setting alarm for 60000 ms
+[149408.130331] RPC:       wake_up_first(80000003da2ae178 "xprt_sending")
+[149408.130348] RPC: 25445 sync task going to sleep
+[149408.130718] RPC:       xs_tcp_data_ready...
+[149408.130728] RPC:       xs_tcp_data_recv started
+[149408.130734] RPC:       reading TCP record fragment of length 52
+[149408.130738] RPC:       reading XID (4 bytes)
+[149408.130744] RPC:       reading reply for XID e8bd7ab0
+[149408.130748] RPC:       reading CALL/REPLY flag (4 bytes)
+[149408.130753] RPC:       read reply XID e8bd7ab0
+[149408.130759] RPC:       XID e8bd7ab0 read 44 bytes
+[149408.130766] RPC:       xprt = 80000003da2ae000, tcp_copied = 52, tcp_offset = 52, tcp_reclen = 52
+[149408.130776] RPC: 25445 xid e8bd7ab0 complete (52 bytes received)
+[149408.130782] RPC: 25445 __rpc_wake_up_task (now 4332243787)
+[149408.130786] RPC: 25445 disabling timer
+[149408.130792] RPC: 25445 removed from queue 80000003da2ae228 "xprt_pending"
+[149408.130801] RPC:       __rpc_wake_up_task done
+[149408.130805] RPC:       xs_tcp_data_recv done
+[149408.130818] RPC: 25445 sync task resuming
+[149408.130825] RPC: 25445 call_status (status 52)
+[149408.130833] RPC: 25445 call_decode (status 52)
+[149408.130840] RPC: 25445 validating UNIX cred 80000003d8973580
+[149408.130846] RPC: 25445 using AUTH_UNIX cred 80000003d8973580 to unwrap rpc data
+[149408.130853] RPC: 25445 call_decode result -2
+[149408.130859] RPC: 25445 return 0, status -2
+[149408.130863] RPC: 25445 release task
+[149408.130870] RPC:       freeing buffer of size 1536 at 80000003cef45800
+[149408.130884] RPC: 25445 release request 80000003ceeadc00
+[149408.130890] RPC:       wake_up_first(80000003da2ae2d8 "xprt_backlog")
+[149408.130895] RPC:       rpc_release_client(80000003da1ad600)
+[149408.130901] RPC: 25445 freeing task
+[149408.130905] NFS reply lookup: -2
+[149408.130921] NFS: dentry_delete(//foo, 8c)
+
+## lookup bar
+[149408.130984] RPC:       looking up Generic cred
+[149408.130994] NFS: permission(0:36/2), mask=0x1, res=0
+[149408.131003] NFS: nfs_lookup_revalidate(//bar) is valid
+[149408.131015] NFS: revalidating (0:36/88)
+[149408.131022] RPC:       new task initialized, procpid 12847
+[149408.131027] RPC:       allocated task 80000003d2189a80
+[149408.131037] RPC: 25446 __rpc_execute flags=0x80
+[149408.131043] RPC: 25446 call_start nfs4 proc GETATTR (sync)
+[149408.131048] RPC: 25446 call_reserve (status 0)
+[149408.131055] RPC: 25446 reserved req 80000003ceeadc00 xid e8bd7ab1
+[149408.131062] RPC:       wake_up_first(80000003da2ae178 "xprt_sending")
+[149408.131072] RPC: 25446 call_reserveresult (status 0)
+[149408.131079] RPC: 25446 call_refresh (status 0)
+[149408.131088] RPC: 25446 looking up UNIX cred
+[149408.131092] RPC:       looking up UNIX cred
+[149408.131099] RPC: 25446 refreshing UNIX cred 80000003d8973580
+[149408.131104] RPC: 25446 call_refreshresult (status 0)
+[149408.131110] RPC: 25446 call_allocate (status 0)
+[149408.131116] RPC: 25446 allocated buffer of size 1120 at 80000003cef45800
+[149408.131121] RPC: 25446 call_bind (status 0)
+[149408.131127] RPC: 25446 call_connect xprt 80000003da2ae000 is connected
+[149408.131132] RPC: 25446 call_transmit (status 0)
+[149408.131145] RPC: 25446 xprt_prepare_transmit
+[149408.131151] RPC: 25446 rpc_xdr_encode (status 0)
+[149408.131156] RPC: 25446 marshaling UNIX cred 80000003d8973580
+[149408.131163] RPC: 25446 using AUTH_UNIX cred 80000003d8973580 to wrap rpc data
+[149408.131170] RPC: 25446 xprt_transmit(124)
+[149408.131207] RPC:       xs_tcp_send_request(124) = 124
+[149408.131217] RPC: 25446 xmit complete
+[149408.131224] RPC: 25446 sleep_on(queue "xprt_pending" time 4332243787)
+[149408.131229] RPC: 25446 added to queue 80000003da2ae228 "xprt_pending"
+[149408.131235] RPC: 25446 setting alarm for 60000 ms
+[149408.131241] RPC:       wake_up_first(80000003da2ae178 "xprt_sending")
+[149408.131248] RPC: 25446 sync task going to sleep
+[149408.131454] RPC:       xs_tcp_data_ready...
+[149408.131472] RPC:       xs_tcp_data_recv started
+[149408.131493] RPC:       reading TCP record fragment of length 188
+[149408.131513] RPC:       reading XID (4 bytes)
+[149408.131534] RPC:       reading reply for XID e8bd7ab1
+[149408.131551] RPC:       reading CALL/REPLY flag (4 bytes)
+[149408.131568] RPC:       read reply XID e8bd7ab1
+[149408.131589] RPC:       XID e8bd7ab1 read 180 bytes
+[149408.131611] RPC:       xprt = 80000003da2ae000, tcp_copied = 188, tcp_offset = 188, tcp_reclen = 188
+[149408.131634] RPC: 25446 xid e8bd7ab1 complete (188 bytes received)
+[149408.131655] RPC: 25446 __rpc_wake_up_task (now 4332243787)
+[149408.131672] RPC: 25446 disabling timer
+[149408.131694] RPC: 25446 removed from queue 80000003da2ae228 "xprt_pending"
+[149408.131713] RPC:       __rpc_wake_up_task done
+[149408.131734] RPC:       xs_tcp_data_recv done
+[149408.134009] RPC: 25446 sync task resuming
+[149408.134017] RPC: 25446 call_status (status 188)
+[149408.134023] RPC: 25446 call_decode (status 188)
+[149408.134030] RPC: 25446 validating UNIX cred 80000003d8973580
+[149408.134036] RPC: 25446 using AUTH_UNIX cred 80000003d8973580 to unwrap rpc data
+[149408.134052] decode_attr_type: type=0100000
+[149408.134057] decode_attr_change: change attribute=5828905206384951296
+[149408.134062] decode_attr_size: file size=0
+[149408.134068] decode_attr_fsid: fsid=(0x6/0x0)
+[149408.134072] decode_attr_fileid: fileid=88
+[149408.134078] decode_attr_fs_locations: fs_locations done, error = 0
+[149408.134086] decode_attr_mode: file mode=0400
+[149408.134091] decode_attr_nlink: nlink=1
+[149408.134098] decode_attr_owner: uid=0
+[149408.134103] decode_attr_group: gid=0
+[149408.134108] decode_attr_rdev: rdev=(0x0:0x0)
+[149408.134113] decode_attr_space_used: space used=0
+[149408.134122] decode_attr_time_access: atime=1357100299
+[149408.134127] decode_attr_time_metadata: ctime=1357147751
+[149408.134132] decode_attr_time_modify: mtime=1357100299
+[149408.134137] decode_attr_mounted_on_fileid: fileid=0
+[149408.134142] decode_getfattr_attrs: xdr returned 0
+[149408.134147] decode_getfattr_generic: xdr returned 0
+[149408.134152] RPC: 25446 call_decode result 0
+[149408.134158] RPC: 25446 return 0, status 0
+[149408.134162] RPC: 25446 release task
+[149408.134172] RPC:       freeing buffer of size 1120 at 80000003cef45800
+[149408.134179] RPC: 25446 release request 80000003ceeadc00
+[149408.134184] RPC:       wake_up_first(80000003da2ae2d8 "xprt_backlog")
+[149408.134190] RPC:       rpc_release_client(80000003da1ad600)
+[149408.134195] RPC: 25446 freeing task
+[149408.134209] NFS: nfs_update_inode(0:36/88 fh_crc=0x80c629ec ct=1 info=0x27e7f)
+[149408.134216] NFS: (0:36/88) revalidation complete
+[149408.134226] NFS: dentry_delete(//bar, cc)
+[149408.134244] RPC:       looking up Generic cred
+[149408.134252] NFS: permission(0:36/2), mask=0x1, res=0
+[149408.134260] NFS: nfs_lookup_revalidate(//foo) is valid
+[149408.134269] NFS: dentry_delete(//foo, cc)
+
+## rename bar foo
+[149408.134292] RPC:       looking up Generic cred
+[149408.134300] NFS: permission(0:36/2), mask=0x1, res=0
+[149408.134309] RPC:       looking up Generic cred
+[149408.134319] NFS: permission(0:36/2), mask=0x1, res=0
+[149408.134328] NFS: nfs_lookup_revalidate(//bar) is valid
+[149408.134334] NFS: nfs_lookup_revalidate(//foo) is valid
+[149408.134341] NFS: permission(0:36/2), mask=0x3, res=0
+[149408.134346] NFS: permission(0:36/2), mask=0x3, res=0
+[149408.134354] NFS: rename(//bar -> //foo, ct=2)
+[149408.134363] RPC:       new task initialized, procpid 12847
+[149408.134368] RPC:       allocated task 80000003d2189a80
+[149408.134374] RPC: 25447 __rpc_execute flags=0x80
+[149408.134385] RPC: 25447 call_start nfs4 proc RENAME (sync)
+[149408.134390] RPC: 25447 call_reserve (status 0)
+[149408.134397] RPC: 25447 reserved req 80000003ceeadc00 xid e8bd7ab2
+[149408.134403] RPC:       wake_up_first(80000003da2ae178 "xprt_sending")
+[149408.134409] RPC: 25447 call_reserveresult (status 0)
+[149408.134418] RPC: 25447 call_refresh (status 0)
+[149408.134424] RPC: 25447 looking up UNIX cred
+[149408.134428] RPC:       looking up UNIX cred
+[149408.134434] RPC: 25447 refreshing UNIX cred 80000003d8973580
+[149408.134440] RPC: 25447 call_refreshresult (status 0)
+[149408.134445] RPC: 25447 call_allocate (status 0)
+[149408.134452] RPC: 25447 allocated buffer of size 1372 at 80000003cef45800
+[149408.134457] RPC: 25447 call_bind (status 0)
+[149408.134463] RPC: 25447 call_connect xprt 80000003da2ae000 is connected
+[149408.134468] RPC: 25447 call_transmit (status 0)
+[149408.134477] RPC: 25447 xprt_prepare_transmit
+[149408.134482] RPC: 25447 rpc_xdr_encode (status 0)
+[149408.134488] RPC: 25447 marshaling UNIX cred 80000003d8973580
+[149408.134494] RPC: 25447 using AUTH_UNIX cred 80000003d8973580 to wrap rpc data
+[149408.134501] RPC: 25447 xprt_transmit(140)
+[149408.134536] RPC:       xs_tcp_send_request(140) = 140
+[149408.134542] RPC: 25447 xmit complete
+[149408.134548] RPC: 25447 sleep_on(queue "xprt_pending" time 4332243788)
+[149408.134555] RPC: 25447 added to queue 80000003da2ae228 "xprt_pending"
+[149408.134560] RPC: 25447 setting alarm for 60000 ms
+[149408.134570] RPC:       wake_up_first(80000003da2ae178 "xprt_sending")
+[149408.134576] RPC: 25447 sync task going to sleep
+[149408.138759] RPC:       xs_tcp_data_ready...
+[149408.138767] RPC:       xs_tcp_data_recv started
+[149408.138776] RPC:       reading TCP record fragment of length 108
+[149408.138781] RPC:       reading XID (4 bytes)
+[149408.138786] RPC:       reading reply for XID e8bd7ab2
+[149408.138791] RPC:       reading CALL/REPLY flag (4 bytes)
+[149408.138801] RPC:       read reply XID e8bd7ab2
+[149408.138807] RPC:       XID e8bd7ab2 read 100 bytes
+[149408.138814] RPC:       xprt = 80000003da2ae000, tcp_copied = 108, tcp_offset = 108, tcp_reclen = 108
+[149408.138828] RPC: 25447 xid e8bd7ab2 complete (108 bytes received)
+[149408.138834] RPC: 25447 __rpc_wake_up_task (now 4332243789)
+[149408.138838] RPC: 25447 disabling timer
+[149408.138844] RPC: 25447 removed from queue 80000003da2ae228 "xprt_pending"
+[149408.138851] RPC:       __rpc_wake_up_task done
+[149408.138855] RPC:       xs_tcp_data_recv done
+[149408.138869] RPC: 25447 sync task resuming
+[149408.138880] RPC: 25447 call_status (status 108)
+[149408.138886] RPC: 25447 call_decode (status 108)
+[149408.138893] RPC: 25447 validating UNIX cred 80000003d8973580
+[149408.138899] RPC: 25447 using AUTH_UNIX cred 80000003d8973580 to unwrap rpc data
+[149408.138906] RPC: 25447 call_decode result 0
+[149408.138912] RPC: 25447 return 0, status 0
+[149408.138916] RPC: 25447 release task
+[149408.138928] RPC:       freeing buffer of size 1372 at 80000003cef45800
+[149408.138934] RPC: 25447 release request 80000003ceeadc00
+[149408.138939] RPC:       wake_up_first(80000003da2ae2d8 "xprt_backlog")
+[149408.138945] RPC:       rpc_release_client(80000003da1ad600)
+[149408.138951] RPC: 25447 freeing task
+[149408.138962] NFS: dentry_delete(//foo, cc)
+[149408.138969] NFS: dentry_delete(//foo, cc)
+
+## sleep 1s
+## lookup bar
+[149409.145093] RPC:       looking up Generic cred
+[149409.145106] NFS: permission(0:36/2), mask=0x1, res=0
+[149409.145114] NFS: lookup(//bar)
+[149409.145121] NFS call  lookup bar
+[149409.145129] RPC:       new task initialized, procpid 12849
+[149409.145134] RPC:       allocated task 80000003d9552b80
+[149409.145141] RPC: 25448 __rpc_execute flags=0x80
+[149409.145148] RPC: 25448 call_start nfs4 proc LOOKUP (sync)
+[149409.145153] RPC: 25448 call_reserve (status 0)
+[149409.145161] RPC: 25448 reserved req 80000003ceeadc00 xid e8bd7ab3
+[149409.145167] RPC:       wake_up_first(80000003da2ae178 "xprt_sending")
+[149409.145173] RPC: 25448 call_reserveresult (status 0)
+[149409.145179] RPC: 25448 call_refresh (status 0)
+[149409.145184] RPC: 25448 looking up UNIX cred
+[149409.145189] RPC:       looking up UNIX cred
+[149409.145195] RPC: 25448 refreshing UNIX cred 80000003d8973580
+[149409.145201] RPC: 25448 call_refreshresult (status 0)
+[149409.145206] RPC: 25448 call_allocate (status 0)
+[149409.145216] RPC: 25448 allocated buffer of size 1536 at 80000003d76fc800
+[149409.145222] RPC: 25448 call_bind (status 0)
+[149409.145228] RPC: 25448 call_connect xprt 80000003da2ae000 is connected
+[149409.145233] RPC: 25448 call_transmit (status 0)
+[149409.145238] RPC: 25448 xprt_prepare_transmit
+[149409.145243] RPC: 25448 rpc_xdr_encode (status 0)
+[149409.145249] RPC: 25448 marshaling UNIX cred 80000003d8973580
+[149409.145256] RPC: 25448 using AUTH_UNIX cred 80000003d8973580 to wrap rpc data
+[149409.145264] RPC: 25448 xprt_transmit(132)
+[149409.145306] RPC:       xs_tcp_send_request(132) = 132
+[149409.145311] RPC: 25448 xmit complete
+[149409.145319] RPC: 25448 sleep_on(queue "xprt_pending" time 4332244040)
+[149409.145325] RPC: 25448 added to queue 80000003da2ae228 "xprt_pending"
+[149409.145330] RPC: 25448 setting alarm for 60000 ms
+[149409.145337] RPC:       wake_up_first(80000003da2ae178 "xprt_sending")
+[149409.145343] RPC: 25448 sync task going to sleep
+[149409.145600] RPC:       xs_tcp_data_ready...
+[149409.145608] RPC:       xs_tcp_data_recv started
+[149409.145614] RPC:       reading TCP record fragment of length 52
+[149409.145618] RPC:       reading XID (4 bytes)
+[149409.145624] RPC:       reading reply for XID e8bd7ab3
+[149409.145629] RPC:       reading CALL/REPLY flag (4 bytes)
+[149409.145633] RPC:       read reply XID e8bd7ab3
+[149409.145640] RPC:       XID e8bd7ab3 read 44 bytes
+[149409.145646] RPC:       xprt = 80000003da2ae000, tcp_copied = 52, tcp_offset = 52, tcp_reclen = 52
+[149409.145653] RPC: 25448 xid e8bd7ab3 complete (52 bytes received)
+[149409.145659] RPC: 25448 __rpc_wake_up_task (now 4332244040)
+[149409.145664] RPC: 25448 disabling timer
+[149409.145670] RPC: 25448 removed from queue 80000003da2ae228 "xprt_pending"
+[149409.145676] RPC:       __rpc_wake_up_task done
+[149409.145680] RPC:       xs_tcp_data_recv done
+[149409.145686] RPC: 25448 sync task resuming
+[149409.145693] RPC: 25448 call_status (status 52)
+[149409.145699] RPC: 25448 call_decode (status 52)
+[149409.145706] RPC: 25448 validating UNIX cred 80000003d8973580
+[149409.145712] RPC: 25448 using AUTH_UNIX cred 80000003d8973580 to unwrap rpc data
+[149409.145720] RPC: 25448 call_decode result -2
+[149409.145726] RPC: 25448 return 0, status -2
+[149409.145730] RPC: 25448 release task
+[149409.145738] RPC:       freeing buffer of size 1536 at 80000003d76fc800
+[149409.145744] RPC: 25448 release request 80000003ceeadc00
+[149409.145750] RPC:       wake_up_first(80000003da2ae2d8 "xprt_backlog")
+[149409.145756] RPC:       rpc_release_client(80000003da1ad600)
+[149409.145761] RPC: 25448 freeing task
+[149409.145766] NFS reply lookup: -2
+[149409.145782] NFS: dentry_delete(//bar, 8c)
+
+## lookup foo
+[149409.145832] RPC:       looking up Generic cred
+[149409.145841] NFS: permission(0:36/2), mask=0x1, res=0
+[149409.145849] NFS call  lookup foo
+[149409.145855] RPC:       new task initialized, procpid 12849
+[149409.145860] RPC:       allocated task 80000003d9552b80
+[149409.145866] RPC: 25449 __rpc_execute flags=0x80
+[149409.145872] RPC: 25449 call_start nfs4 proc LOOKUP (sync)
+[149409.145878] RPC: 25449 call_reserve (status 0)
+[149409.145885] RPC: 25449 reserved req 80000003ceeadc00 xid e8bd7ab4
+[149409.145891] RPC:       wake_up_first(80000003da2ae178 "xprt_sending")
+[149409.145897] RPC: 25449 call_reserveresult (status 0)
+[149409.145902] RPC: 25449 call_refresh (status 0)
+[149409.145907] RPC: 25449 looking up UNIX cred
+[149409.145912] RPC:       looking up UNIX cred
+[149409.145918] RPC: 25449 refreshing UNIX cred 80000003d8973580
+[149409.145924] RPC: 25449 call_refreshresult (status 0)
+[149409.145929] RPC: 25449 call_allocate (status 0)
+[149409.145935] RPC: 25449 allocated buffer of size 1536 at 80000003d76fc800
+[149409.145941] RPC: 25449 call_bind (status 0)
+[149409.145946] RPC: 25449 call_connect xprt 80000003da2ae000 is connected
+[149409.145952] RPC: 25449 call_transmit (status 0)
+[149409.145956] RPC: 25449 xprt_prepare_transmit
+[149409.146089] RPC: 25449 rpc_xdr_encode (status 0)
+[149409.146112] RPC: 25449 marshaling UNIX cred 80000003d8973580
+[149409.146130] RPC: 25449 using AUTH_UNIX cred 80000003d8973580 to wrap rpc data
+[149409.146151] RPC: 25449 xprt_transmit(132)
+[149409.146189] RPC:       xs_tcp_send_request(132) = 132
+[149409.146210] RPC: 25449 xmit complete
+[149409.146228] RPC: 25449 sleep_on(queue "xprt_pending" time 4332244041)
+[149409.146253] RPC: 25449 added to queue 80000003da2ae228 "xprt_pending"
+[149409.146270] RPC: 25449 setting alarm for 60000 ms
+[149409.146299] RPC:       wake_up_first(80000003da2ae178 "xprt_sending")
+[149409.146319] RPC: 25449 sync task going to sleep
+[149409.146641] RPC:       xs_tcp_data_ready...
+[149409.146652] RPC:       xs_tcp_data_recv started
+[149409.146657] RPC:       reading TCP record fragment of length 224
+[149409.146662] RPC:       reading XID (4 bytes)
+[149409.146667] RPC:       reading reply for XID e8bd7ab4
+[149409.146672] RPC:       reading CALL/REPLY flag (4 bytes)
+[149409.146680] RPC:       read reply XID e8bd7ab4
+[149409.146686] RPC:       XID e8bd7ab4 read 216 bytes
+[149409.146693] RPC:       xprt = 80000003da2ae000, tcp_copied = 224, tcp_offset = 224, tcp_reclen = 224
+[149409.146699] RPC: 25449 xid e8bd7ab4 complete (224 bytes received)
+[149409.146705] RPC: 25449 __rpc_wake_up_task (now 4332244041)
+[149409.146710] RPC: 25449 disabling timer
+[149409.146716] RPC: 25449 removed from queue 80000003da2ae228 "xprt_pending"
+[149409.146728] RPC:       __rpc_wake_up_task done
+[149409.146732] RPC:       xs_tcp_data_recv done
+[149409.146749] RPC: 25449 sync task resuming
+[149409.146755] RPC: 25449 call_status (status 224)
+[149409.146761] RPC: 25449 call_decode (status 224)
+[149409.146768] RPC: 25449 validating UNIX cred 80000003d8973580
+[149409.146777] RPC: 25449 using AUTH_UNIX cred 80000003d8973580 to unwrap rpc data
+[149409.146786] decode_attr_type: type=0100000
+[149409.146793] decode_attr_change: change attribute=5828905657356517376
+[149409.146798] decode_attr_size: file size=0
+[149409.146803] decode_attr_fsid: fsid=(0x6/0x0)
+[149409.146808] decode_attr_fileid: fileid=88
+[149409.146814] decode_attr_fs_locations: fs_locations done, error = 0
+[149409.146819] decode_attr_mode: file mode=0400
+[149409.146832] decode_attr_nlink: nlink=1
+[149409.146838] decode_attr_owner: uid=0
+[149409.146844] decode_attr_group: gid=0
+[149409.146849] decode_attr_rdev: rdev=(0x0:0x0)
+[149409.146854] decode_attr_space_used: space used=0
+[149409.146859] decode_attr_time_access: atime=1357100299
+[149409.146865] decode_attr_time_metadata: ctime=1357147856
+[149409.146874] decode_attr_time_modify: mtime=1357100299
+[149409.146879] decode_attr_mounted_on_fileid: fileid=0
+[149409.146884] decode_getfattr_attrs: xdr returned 0
+[149409.146889] decode_getfattr_generic: xdr returned 0
+[149409.146894] RPC: 25449 call_decode result 0
+[149409.146900] RPC: 25449 return 0, status 0
+[149409.146904] RPC: 25449 release task
+[149409.146912] RPC:       freeing buffer of size 1536 at 80000003d76fc800
+[149409.146918] RPC: 25449 release request 80000003ceeadc00
+[149409.146924] RPC:       wake_up_first(80000003da2ae2d8 "xprt_backlog")
+[149409.146933] RPC:       rpc_release_client(80000003da1ad600)
+[149409.146938] RPC: 25449 freeing task
+[149409.146943] NFS reply lookup: 0
+[149409.146954] NFS: nfs_update_inode(0:36/88 fh_crc=0x80c629ec ct=1 info=0x27e7f)
+[149409.146960] NFS: change_attr change on server for file 0:36/88
+[149409.146968] NFS: nfs_lookup_revalidate(//foo) is valid
+[149409.146981] NFS: dentry_delete(//foo, cc)
+
+## 
+[149409.146999] RPC:       looking up Generic cred
+[149409.147006] NFS: permission(0:36/2), mask=0x1, res=0
+[149409.147013] NFS: revalidating (0:36/2)
+[149409.147020] RPC:       new task initialized, procpid 12849
+[149409.147025] RPC:       allocated task 80000003d9552b80
+[149409.147034] RPC: 25450 __rpc_execute flags=0x80
+[149409.147040] RPC: 25450 call_start nfs4 proc GETATTR (sync)
+[149409.147045] RPC: 25450 call_reserve (status 0)
+[149409.147052] RPC: 25450 reserved req 80000003ceeadc00 xid e8bd7ab5
+[149409.147058] RPC:       wake_up_first(80000003da2ae178 "xprt_sending")
+[149409.147064] RPC: 25450 call_reserveresult (status 0)
+[149409.147070] RPC: 25450 call_refresh (status 0)
+[149409.147075] RPC: 25450 looking up UNIX cred
+[149409.147082] RPC:       looking up UNIX cred
+[149409.147088] RPC: 25450 refreshing UNIX cred 80000003d8973580
+[149409.147094] RPC: 25450 call_refreshresult (status 0)
+[149409.147099] RPC: 25450 call_allocate (status 0)
+[149409.147105] RPC: 25450 allocated buffer of size 1120 at 80000003d76fc800
+[149409.147111] RPC: 25450 call_bind (status 0)
+[149409.147117] RPC: 25450 call_connect xprt 80000003da2ae000 is connected
+[149409.147125] RPC: 25450 call_transmit (status 0)
+[149409.147130] RPC: 25450 xprt_prepare_transmit
+[149409.147135] RPC: 25450 rpc_xdr_encode (status 0)
+[149409.147141] RPC: 25450 marshaling UNIX cred 80000003d8973580
+[149409.147147] RPC: 25450 using AUTH_UNIX cred 80000003d8973580 to wrap rpc data
+[149409.147154] RPC: 25450 xprt_transmit(116)
+[149409.147190] RPC:       xs_tcp_send_request(116) = 116
+[149409.147208] RPC: 25450 xmit complete
+[149409.147231] RPC: 25450 sleep_on(queue "xprt_pending" time 4332244041)
+[149409.147249] RPC: 25450 added to queue 80000003da2ae228 "xprt_pending"
+[149409.147270] RPC: 25450 setting alarm for 60000 ms
+[149409.147290] RPC:       wake_up_first(80000003da2ae178 "xprt_sending")
+[149409.147310] RPC: 25450 sync task going to sleep
+[149409.147434] RPC:       xs_tcp_data_ready...
+[149409.147452] RPC:       xs_tcp_data_recv started
+[149409.147470] RPC:       reading TCP record fragment of length 188
+[149409.147491] RPC:       reading XID (4 bytes)
+[149409.147508] RPC:       reading reply for XID e8bd7ab5
+[149409.147525] RPC:       reading CALL/REPLY flag (4 bytes)
+[149409.147545] RPC:       read reply XID e8bd7ab5
+[149409.147561] RPC:       XID e8bd7ab5 read 180 bytes
+[149409.147567] RPC:       xprt = 80000003da2ae000, tcp_copied = 188, tcp_offset = 188, tcp_reclen = 188
+[149409.147574] RPC: 25450 xid e8bd7ab5 complete (188 bytes received)
+[149409.147579] RPC: 25450 __rpc_wake_up_task (now 4332244041)
+[149409.147584] RPC: 25450 disabling timer
+[149409.147594] RPC: 25450 removed from queue 80000003da2ae228 "xprt_pending"
+[149409.147602] RPC:       __rpc_wake_up_task done
+[149409.147606] RPC:       xs_tcp_data_recv done
+[149409.147620] RPC: 25450 sync task resuming
+[149409.147626] RPC: 25450 call_status (status 188)
+[149409.147632] RPC: 25450 call_decode (status 188)
+[149409.147639] RPC: 25450 validating UNIX cred 80000003d8973580
+[149409.147645] RPC: 25450 using AUTH_UNIX cred 80000003d8973580 to unwrap rpc data
+[149409.147656] decode_attr_type: type=040000
+[149409.147661] decode_attr_change: change attribute=5828905657356517376
+[149409.147666] decode_attr_size: file size=4096
+[149409.147671] decode_attr_fsid: fsid=(0x6/0x0)
+[149409.147676] decode_attr_fileid: fileid=2
+[149409.147682] decode_attr_fs_locations: fs_locations done, error = 0
+[149409.147687] decode_attr_mode: file mode=0777
+[149409.147695] decode_attr_nlink: nlink=14
+[149409.147701] decode_attr_owner: uid=0
+[149409.147706] decode_attr_group: gid=0
+[149409.147711] decode_attr_rdev: rdev=(0x0:0x0)
+[149409.147716] decode_attr_space_used: space used=4096
+[149409.147721] decode_attr_time_access: atime=1441113060
+[149409.147726] decode_attr_time_metadata: ctime=1357147856
+[149409.147732] decode_attr_time_modify: mtime=1357147856
+[149409.147740] decode_attr_mounted_on_fileid: fileid=0
+[149409.147745] decode_getfattr_attrs: xdr returned 0
+[149409.147750] decode_getfattr_generic: xdr returned 0
+[149409.147755] RPC: 25450 call_decode result 0
+[149409.147761] RPC: 25450 return 0, status 0
+[149409.147765] RPC: 25450 release task
+[149409.147772] RPC:       freeing buffer of size 1120 at 80000003d76fc800
+[149409.147778] RPC: 25450 release request 80000003ceeadc00
+[149409.147788] RPC:       wake_up_first(80000003da2ae2d8 "xprt_backlog")
+[149409.147793] RPC:       rpc_release_client(80000003da1ad600)
+[149409.147799] RPC: 25450 freeing task
+[149409.147807] NFS: nfs_update_inode(0:36/2 fh_crc=0x8bb7a967 ct=2 info=0x27e7f)
+[149409.147814] NFS: (0:36/2) revalidation complete
+[149409.147820] NFS: nfs_lookup_revalidate(//bar) is valid
+[149409.147826] NFS: dentry_delete(//bar, cc)
+
+
+[149409.147853] RPC:       looking up Generic cred
+[149409.147861] NFS: permission(0:36/2), mask=0x1, res=0
+[149409.147867] RPC:       looking up Generic cred
+[149409.147874] NFS: permission(0:36/2), mask=0x1, res=0
+[149409.147886] NFS: nfs_lookup_revalidate(//foo) is valid
+[149409.147893] NFS: nfs_lookup_revalidate(//bar) is valid
+[149409.147899] NFS: permission(0:36/2), mask=0x3, res=0
+[149409.147905] NFS: permission(0:36/2), mask=0x3, res=0
+[149409.147912] NFS: rename(//foo -> //bar, ct=2)
+[149409.147921] RPC:       new task initialized, procpid 12849
+[149409.147929] RPC:       allocated task 80000003d9552b80
+[149409.147935] RPC: 25451 __rpc_execute flags=0x80
+[149409.147941] RPC: 25451 call_start nfs4 proc RENAME (sync)
+[149409.147947] RPC: 25451 call_reserve (status 0)
+[149409.147954] RPC: 25451 reserved req 80000003ceeadc00 xid e8bd7ab6
+[149409.147960] RPC:       wake_up_first(80000003da2ae178 "xprt_sending")
+[149409.147966] RPC: 25451 call_reserveresult (status 0)
+[149409.147971] RPC: 25451 call_refresh (status 0)
+[149409.147980] RPC: 25451 looking up UNIX cred
+[149409.147984] RPC:       looking up UNIX cred
+[149409.147991] RPC: 25451 refreshing UNIX cred 80000003d8973580
+[149409.147996] RPC: 25451 call_refreshresult (status 0)
+[149409.148002] RPC: 25451 call_allocate (status 0)
+[149409.148008] RPC: 25451 allocated buffer of size 1372 at 80000003d76fc800
+[149409.148013] RPC: 25451 call_bind (status 0)
+[149409.148019] RPC: 25451 call_connect xprt 80000003da2ae000 is connected
+[149409.148028] RPC: 25451 call_transmit (status 0)
+[149409.148033] RPC: 25451 xprt_prepare_transmit
+[149409.148038] RPC: 25451 rpc_xdr_encode (status 0)
+[149409.148044] RPC: 25451 marshaling UNIX cred 80000003d8973580
+[149409.148050] RPC: 25451 using AUTH_UNIX cred 80000003d8973580 to wrap rpc data
+[149409.148057] RPC: 25451 xprt_transmit(140)
+[149409.148091] RPC:       xs_tcp_send_request(140) = 140
+[149409.148097] RPC: 25451 xmit complete
+[149409.148109] RPC: 25451 sleep_on(queue "xprt_pending" time 4332244041)
+[149409.148115] RPC: 25451 added to queue 80000003da2ae228 "xprt_pending"
+[149409.148120] RPC: 25451 setting alarm for 60000 ms
+[149409.148127] RPC:       wake_up_first(80000003da2ae178 "xprt_sending")
+[149409.148133] RPC: 25451 sync task going to sleep
+[149409.150905] RPC:       xs_tcp_data_ready...
+[149409.150912] RPC:       xs_tcp_data_recv started
+[149409.150922] RPC:       reading TCP record fragment of length 108
+[149409.150926] RPC:       reading XID (4 bytes)
+[149409.150932] RPC:       reading reply for XID e8bd7ab6
+[149409.150936] RPC:       reading CALL/REPLY flag (4 bytes)
+[149409.150941] RPC:       read reply XID e8bd7ab6
+[149409.150951] RPC:       XID e8bd7ab6 read 100 bytes
+[149409.150957] RPC:       xprt = 80000003da2ae000, tcp_copied = 108, tcp_offset = 108, tcp_reclen = 108
+[149409.150963] RPC: 25451 xid e8bd7ab6 complete (108 bytes received)
+[149409.150970] RPC: 25451 __rpc_wake_up_task (now 4332244042)
+[149409.150974] RPC: 25451 disabling timer
+[149409.150980] RPC: 25451 removed from queue 80000003da2ae228 "xprt_pending"
+[149409.150988] RPC:       __rpc_wake_up_task done
+[149409.150993] RPC:       xs_tcp_data_recv done
+[149409.151010] RPC: 25451 sync task resuming
+[149409.151016] RPC: 25451 call_status (status 108)
+[149409.151022] RPC: 25451 call_decode (status 108)
+[149409.151028] RPC: 25451 validating UNIX cred 80000003d8973580
+[149409.151034] RPC: 25451 using AUTH_UNIX cred 80000003d8973580 to unwrap rpc data
+[149409.151042] RPC: 25451 call_decode result 0
+[149409.151051] RPC: 25451 return 0, status 0
+[149409.151055] RPC: 25451 release task
+[149409.151062] RPC:       freeing buffer of size 1372 at 80000003d76fc800
+[149409.151068] RPC: 25451 release request 80000003ceeadc00
+[149409.151074] RPC:       wake_up_first(80000003da2ae2d8 "xprt_backlog")
+[149409.151080] RPC:       rpc_release_client(80000003da1ad600)
+[149409.151085] RPC: 25451 freeing task
+[149409.151097] NFS: dentry_delete(//bar, cc)
+[149409.151103] NFS: dentry_delete(//bar, cc)
